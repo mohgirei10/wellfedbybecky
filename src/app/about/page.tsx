@@ -63,6 +63,109 @@ export default function PremiumAboutPage() {
       {/* =========================================================
           HERO
       ========================================================== */}
+     
+         
+            <section className="bg-[#0A0503] px-6 py-28 lg:py-36">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 0.8,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+            viewport={{ once: true }}
+            className="relative mx-auto w-full max-w-sm"
+          >
+            <div className="aspect-[0.8] overflow-hidden bg-[#160C08]">
+              <img
+                src="/ceo.png"
+                alt="Becky, founder of Wellfed by Becky"
+                className="h-full w-full object-cover rounded transition duration-700 hover:scale-105 hover:grayscale-0"
+              />
+            </div>
+
+            <div className="absolute -bottom-5 -right-5 border border-white/10 bg-[#120A07] px-5 py-4">
+              <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#CD9C61]">
+                Founder
+              </p>
+
+              <p className="mt-1 font-serif text-lg text-white">
+                Becky
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={stagger}
+          >
+            <motion.p
+              variants={fadeUp}
+              className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#CD9C61]"
+            >
+              A note from Becky
+            </motion.p>
+
+            <motion.div
+              variants={fadeUp}
+              className="mt-7 font-serif text-4xl leading-[1.18] tracking-tight text-white sm:text-5xl lg:text-6xl"
+            >
+              “I wanted to create something that felt familiar, nourishing
+              and genuinely enjoyable — something people would be happy to
+              make part of their everyday life.”
+            </motion.div>
+
+            <motion.div
+              variants={fadeUp}
+              className="mt-9 flex items-center gap-4"
+            >
+              <div className="h-px w-10 bg-[#CD9C61]" />
+
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40">
+                Becky · Founder, Wellfed by Becky
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+           <section className="border-y border-white/8 bg-[#0E0705] px-6 mt-20">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-3">
+          <div className="border-b border-white/8 px-0 py-10 md:border-b-0 md:border-r md:px-8 lg:px-12">
+            <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#CD9C61]">
+              01
+            </p>
+
+            <p className="mt-3 font-serif text-xl text-white">
+              Simple ingredients.
+            </p>
+          </div>
+
+          <div className="border-b border-white/8 px-0 py-10 md:border-b-0 md:border-r md:px-8 lg:px-12">
+            <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#CD9C61]">
+              02
+            </p>
+
+            <p className="mt-3 font-serif text-xl text-white">
+              Thoughtful preparation.
+            </p>
+          </div>
+
+          <div className="px-0 py-10 md:px-8 lg:px-12">
+            <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#CD9C61]">
+              03
+            </p>
+
+            <p className="mt-3 font-serif text-xl text-white">
+              Better everyday nourishment.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="relative bg-[#120A07] px-6 pb-24 pt-36 sm:pt-40 lg:pb-32 lg:pt-48">
         <div className="pointer-events-none absolute -left-45 top-20 h-107.5 w-107.5 rounded-full bg-[#CD9C61]/8 blur-[140px]" />
 
@@ -109,39 +212,7 @@ export default function PremiumAboutPage() {
       {/* =========================================================
           BRAND STATEMENT
       ========================================================== */}
-      <section className="border-y border-white/8 bg-[#0E0705] px-6">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-3">
-          <div className="border-b border-white/8 px-0 py-10 md:border-b-0 md:border-r md:px-8 lg:px-12">
-            <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#CD9C61]">
-              01
-            </p>
-
-            <p className="mt-3 font-serif text-xl text-white">
-              Simple ingredients.
-            </p>
-          </div>
-
-          <div className="border-b border-white/8 px-0 py-10 md:border-b-0 md:border-r md:px-8 lg:px-12">
-            <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#CD9C61]">
-              02
-            </p>
-
-            <p className="mt-3 font-serif text-xl text-white">
-              Thoughtful preparation.
-            </p>
-          </div>
-
-          <div className="px-0 py-10 md:px-8 lg:px-12">
-            <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#CD9C61]">
-              03
-            </p>
-
-            <p className="mt-3 font-serif text-xl text-white">
-              Better everyday nourishment.
-            </p>
-          </div>
-        </div>
-      </section>
+    
 
       {/* =========================================================
           IMAGE / STORY
@@ -160,7 +231,7 @@ export default function PremiumAboutPage() {
             className="relative aspect-[0.9] overflow-hidden bg-[#E4D8CB] sm:aspect-[1.05]"
           >
             <img
-              src="/about.jpg"
+              src="/hero.png"
               alt="Wellfed by Becky ingredients and preparation"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-[10s] hover:scale-105"
             />
@@ -292,7 +363,7 @@ export default function PremiumAboutPage() {
             className="mt-14 relative aspect-2/1 overflow-hidden bg-[#1A0F0A]"
           >
             <img
-              src="/process.jpg"
+              src="/hero.png"
               alt="Wellfed Tombrown preparation process"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-[12s] hover:scale-105"
             />
@@ -389,72 +460,7 @@ export default function PremiumAboutPage() {
       {/* =========================================================
           FOUNDER
       ========================================================== */}
-      <section className="bg-[#0A0503] px-6 py-28 lg:py-36">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{
-              duration: 0.8,
-              ease: [0.16, 1, 0.3, 1],
-            }}
-            viewport={{ once: true }}
-            className="relative mx-auto w-full max-w-sm"
-          >
-            <div className="aspect-[0.8] overflow-hidden bg-[#160C08]">
-              <img
-                src="/becky.jpg"
-                alt="Becky, founder of Wellfed by Becky"
-                className="h-full w-full object-cover grayscale transition duration-700 hover:scale-105 hover:grayscale-0"
-              />
-            </div>
-
-            <div className="absolute -bottom-5 -right-5 border border-white/10 bg-[#120A07] px-5 py-4">
-              <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#CD9C61]">
-                Founder
-              </p>
-
-              <p className="mt-1 font-serif text-lg text-white">
-                Becky
-              </p>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-          >
-            <motion.p
-              variants={fadeUp}
-              className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#CD9C61]"
-            >
-              A note from Becky
-            </motion.p>
-
-            <motion.div
-              variants={fadeUp}
-              className="mt-7 font-serif text-4xl leading-[1.18] tracking-tight text-white sm:text-5xl lg:text-6xl"
-            >
-              “I wanted to create something that felt familiar, nourishing
-              and genuinely enjoyable — something people would be happy to
-              make part of their everyday life.”
-            </motion.div>
-
-            <motion.div
-              variants={fadeUp}
-              className="mt-9 flex items-center gap-4"
-            >
-              <div className="h-px w-10 bg-[#CD9C61]" />
-
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40">
-                Becky · Founder, Wellfed by Becky
-              </p>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+     
 
       {/* =========================================================
           CTA

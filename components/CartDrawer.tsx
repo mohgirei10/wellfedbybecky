@@ -75,7 +75,7 @@ export default function CartDrawer({
             className="
               fixed
               inset-0
-              z-[80]
+              z-80
               cursor-default
               bg-black/65
               backdrop-blur-sm
@@ -95,7 +95,7 @@ export default function CartDrawer({
               fixed
               right-0
               top-0
-              z-[90]
+              z-90
               flex
               h-dvh
               w-full

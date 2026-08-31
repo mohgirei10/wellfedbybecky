@@ -1,9 +1,12 @@
-// data/product.ts
-
 export type ProductCategory =
-  | "Classic"
-  | "Nutty"
-  | "Date"
+  | "Tombrown"
+  | "Curves";
+
+export type ProductSize = {
+  id: string;
+  label: string;
+  price: number;
+};
 
 export type Product = {
   id: string;
@@ -11,121 +14,221 @@ export type Product = {
   title: string;
   subtitle: string;
   description: string;
+  longDescription: string;
   price: number;
   category: ProductCategory;
   size: string;
   image: string;
   badge?: string;
+  sizes: ProductSize[];
 };
 
 export const products: Product[] = [
   {
     id: "1",
-    slug: "classic-blend",
-    title: "Classic Blend",
-    subtitle: "1 KG · SIGNATURE",
+    slug: "premium-tombrown-400g",
+    title: "Premium Tombrown",
+    subtitle: "400G · PREMIUM BLEND",
     description:
-      "Our signature roasted blend of soya beans, guinea corn and groundnuts.",
-    price: 5500,
-    category: "Classic",
-    size: "1 KG",
-    image: "/hero.png",
-    badge: "Best Seller",
+      "Nutritious cereal blend made from carefully selected ingredients🥣 Suitable for everyone🤗 Super effective 💯",
+    longDescription:
+      "Nutritious cereal blend made from carefully selected ingredients🥣 Suitable for everyone🤗 Super effective 💯",
+    price: 8500,
+    category: "Tombrown",
+    size: "400G",
+    image: "/product1.png",
+    badge: "Popular",
+    sizes: [
+      {
+        id: "400g",
+        label: "400G",
+        price: 8500,
+      },
+    ],
   },
 
   {
     id: "2",
-    slug: "classic-blend-family",
-    title: "Classic Blend Family Pack",
-    subtitle: "4 KG · FAMILY SIZE",
+    slug: "premium-tombrown-600g",
+    title: "Premium Tombrown",
+    subtitle: "600G · PREMIUM BLEND",
     description:
-      "A larger pack of our signature blend, made for households and regular use.",
-    price: 18000,
-    category: "Nutty",
-    size: "4 KG",
-    image: "/hero.png",
-    badge: "Best Value",
+      "Nutritious cereal blend made from carefully selected ingredients🥣 Suitable for everyone🤗 Super effective 💯",
+    longDescription:
+      "Nutritious cereal blend made from carefully selected ingredients🥣 Suitable for everyone🤗 Super effective 💯",
+    price: 10000,
+    category: "Tombrown",
+    size: "600G",
+    image: "/product2.png",
+    badge: "Best Seller",
+    sizes: [
+      {
+        id: "600g",
+        label: "600G",
+        price: 10000,
+      },
+    ],
   },
 
   {
     id: "3",
-    slug: "nutty-extra",
-    title: "Nutty Extra",
-    subtitle: "1 KG · RICH & NUTTY",
+    slug: "premium-tombrown-1kg",
+    title: "Premium Tombrown",
+    subtitle: "1KG · PREMIUM BLEND",
     description:
-      "A fuller, nuttier expression for customers who enjoy a richer roasted taste.",
-    price: 6200,
-    category: "Nutty",
+      "Nutritious cereal blend made from carefully selected ingredients🥣 Suitable for everyone🤗 Super effective 💯",
+    longDescription:
+      "Nutritious cereal blend made from carefully selected ingredients🥣 Suitable for everyone🤗 Super effective 💯",
+    price: 15000,
+    category: "Tombrown",
     size: "1 KG",
-    image: "/hero.png",
+    image: "/product3.png",
     badge: "Popular",
+    sizes: [
+      {
+        id: "1kg",
+        label: "1 KG",
+        price: 15000,
+      },
+    ],
   },
 
   {
     id: "4",
-    slug: "nutty-extra-family",
-    title: "Nutty Extra Family Pack",
-    subtitle: "4 KG · FAMILY SIZE",
+    slug: "premium-tombrown-1-5kg",
+    title: "Premium Tombrown",
+    subtitle: "1.5KG · PREMIUM BLEND",
     description:
-      "More of our rich nut-forward blend for families and frequent breakfasts.",
-    price: 20000,
-    category: "Date",
-    size: "4 KG",
-    image: "/hero.png",
-    badge: "Family",
+      "Nutritious cereal blend made from carefully selected ingredients🥣 Suitable for everyone🤗 Super effective 💯",
+    longDescription:
+      "Nutritious cereal blend made from carefully selected ingredients🥣 Suitable for everyone🤗 Super effective 💯",
+    price: 15000,
+    category: "Tombrown",
+    size: "1.5 KG",
+    image: "/product4.png",
+    badge: "Best Value",
+    sizes: [
+      {
+        id: "1-5kg",
+        label: "1.5 KG",
+        price: 15000,
+      },
+    ],
   },
 
   {
     id: "5",
-    slug: "date-infused",
-    title: "Date Infused",
-    subtitle: "1 KG · NATURALLY SWEET",
+    slug: "premium-tombrown-2kg",
+    title: "Premium Tombrown",
+    subtitle: "2KG · PREMIUM BLEND",
     description:
-      "A naturally sweetened variation with a warm roasted character.",
-    price: 6500,
-    category: "Date",
-    size: "1 KG",
-    image: "/hero.png",
-    badge: "New",
+      "Nutritious cereal blend made from carefully selected ingredients🥣 Suitable for everyone🤗 Super effective 💯",
+    longDescription:
+      "Nutritious cereal blend made from carefully selected ingredients🥣 Suitable for everyone🤗 Super effective 💯",
+    price: 25000,
+    category: "Tombrown",
+    size: "2 KG",
+    image: "/product5.png",
+    badge: "Family Size",
+    sizes: [
+      {
+        id: "2kg",
+        label: "2 KG",
+        price: 25000,
+      },
+    ],
+  },
+
+  // Curves products
+  {
+    id: "6",
+    slug: "curves-enhancement-powder-600g",
+    title: "Curves Enhancement Powder",
+    subtitle: "600G · CURVES ENHANCEMENT 🍑",
+    description:
+      "Curves Enhancement Powder designed as part of a beauty and wellness routine.",
+    longDescription:
+      "Supports Hips, Butt & Overall Feminine body fullness, Super effective",
+    price: 15000,
+    category: "Curves",
+    size: "600G",
+    image: "/product6.png",
+    badge: "Popular",
+    sizes: [
+      {
+        id: "600g",
+        label: "600G",
+        price: 15000,
+      },
+    ],
   },
 
   {
-    id: "6",
-    slug: "date-infused-family",
-    title: "Date Infused Family Pack",
-    subtitle: "4 KG · FAMILY SIZE",
-    description:
-      "A generous family-size option for customers who enjoy our Date Infused blend.",
-    price: 21000,
-    category: "Classic",
-    size: "4 KG",
-    image: "/hero.png",
-    badge: "Family",
-  },
-   {
     id: "7",
-    slug: "date-infused-family",
-    title: "Date Infused Family Pack",
-    subtitle: "4 KG · FAMILY SIZE",
+    slug: "curves-enhancement-powder-1kg",
+    title: "Curves Enhancement Powder",
+    subtitle: "1KG · CURVES ENHANCEMENT 🍑",
     description:
-      "A generous family-size option for customers who enjoy our Date Infused blend.",
-    price: 21000,
-    category: "Classic",
-    size: "4 KG",
-    image: "/hero.png",
-    badge: "Family",
+      "Curves Enhancement Powder designed as part of a beauty and wellness routine.",
+    longDescription:
+      "Supports Hips, Butt & Overall Feminine body fullness, Super effective",
+    price: 20000,
+    category: "Curves",
+    size: "1 KG",
+    image: "/product7.png",
+    badge: "Best Seller",
+    sizes: [
+      {
+        id: "1kg",
+        label: "1 KG",
+        price: 20000,
+      },
+    ],
   },
-   {
+
+  {
     id: "8",
-    slug: "date-infused-family",
-    title: "Date Infused Family Pack",
-    subtitle: "4 KG · FAMILY SIZE",
+    slug: "curves-enhancement-powder-1-5kg",
+    title: "Curves Enhancement Powder",
+    subtitle: "1.5KG · CURVES ENHANCEMENT 🍑",
     description:
-      "A generous family-size option for customers who enjoy our Date Infused blend.",
-    price: 21000,
-    category: "Classic",
-    size: "4 KG",
-    image: "/hero.png",
-    badge: "Family",
+      "Curves Enhancement Powder designed as part of a beauty and wellness routine.",
+    longDescription:
+      "Supports Hips, Butt & Overall Feminine body fullness, Super effective",
+    price: 27000,
+    category: "Curves",
+    size: "1.5 KG",
+    image: "/product8.png",
+    badge: "Best Value",
+    sizes: [
+      {
+        id: "1-5kg",
+        label: "1.5 KG",
+        price: 27000,
+      },
+    ],
+  },
+
+  {
+    id: "9",
+    slug: "curves-enhancement-powder-2kg",
+    title: "Curves Enhancement Powder",
+    subtitle: "2KG · CURVES ENHANCEMENT 🍑",
+    description:
+      "Curves Enhancement Powder designed as part of a beauty and wellness routine.",
+    longDescription:
+      "Supports Hips, Butt & Overall Feminine body fullness, Super effective",
+    price: 34000,
+    category: "Curves",
+    size: "2 KG",
+    image: "/product9.png",
+    badge: "Family Size",
+    sizes: [
+      {
+        id: "2kg",
+        label: "2 KG",
+        price: 34000,
+      },
+    ],
   },
 ];

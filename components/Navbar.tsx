@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import CartButton from "./CartButton";
+ import { Phone } from "lucide-react";
+
 
 type SocialLinks = {
   instagram: string;
@@ -143,7 +145,7 @@ export default function Navbar({
           ${
             scrolled
               ? "border-b border-white/8 bg-[#120A07]/88 shadow-[0_8px_30px_rgba(0,0,0,0.24)] backdrop-blur-2xl"
-              : "bg-transparent"
+              : "bg-[#4A2C20]"
           }
         `}
       >
@@ -154,12 +156,12 @@ export default function Navbar({
             onClick={closeMenu}
             className="group relative z-10 flex flex-col"
           >
-            <span className="font-serif text-xl font-bold tracking-[0.18em] text-[#F9F4EE] transition-colors duration-300 group-hover:text-[#CD9C61]">
+            <span className="font-serif text-2xl font-bold italic tracking-wide text-[#CD9C61] transition-colors duration-300 group-hover:text-[#CD9C61]">
               WELLFED
             </span>
 
-            <span className="-mt-1 font-serif text-xs italic tracking-wide text-[#CD9C61]">
-              by Becky
+            <span className="-mt-1 font-serif text-xl italic tracking-wide text-[#FFFFFF]">
+              -by Becky-
             </span>
           </Link>
 

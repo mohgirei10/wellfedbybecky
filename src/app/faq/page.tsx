@@ -208,58 +208,20 @@ export default function FAQPage() {
   };
 
   return (
-    <div className="min-h-screen overflow-hidden bg-[#120A07] text-[#F9F4EE] selection:bg-[#CD9C61] selection:text-[#120A07]">
+    <div className="min-h-screen mt-20 overflow-hidden bg-[#120A07] text-[#F9F4EE] selection:bg-[#CD9C61] selection:text-[#120A07]">
       {/* =========================================================
           HERO
-      ========================================================== */}
-      <section className="relative bg-[#120A07] px-6 pb-20 pt-36 sm:pt-40 lg:pb-28 lg:pt-48">
-        <div className="pointer-events-none absolute left-[-170px] top-16 h-107.5 w-[430px] rounded-full bg-[#CD9C61]/8 blur-[140px]" />
 
-        <div className="pointer-events-none absolute bottom-[-180px] right-[-100px] h-[450px] w-[450px] rounded-full bg-[#CD9C61]/7 blur-[140px]" />
-
-        <div className="relative z-10 mx-auto max-w-5xl text-center">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={stagger}
-          >
-            <motion.p
-              variants={fadeUp}
-              className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#CD9C61]"
-            >
-              Frequently asked questions
-            </motion.p>
-
-            <motion.h1
-              variants={fadeUp}
-              className="mt-7 font-serif text-5xl leading-[0.98] tracking-[-0.045em] text-[#F9F4EE] sm:text-6xl lg:text-8xl"
-            >
-              Everything you need
-              <br />
-              <span className="italic font-light text-white/35">
-                to know.
-              </span>
-            </motion.h1>
-
-            <motion.p
-              variants={fadeUp}
-              className="mx-auto mt-8 max-w-2xl text-sm font-light leading-7 text-white/50 sm:text-base"
-            >
-              Questions about the blends, preparation, ordering or delivery?
-              Start here. And when you're ready, we're only a WhatsApp message
-              away.
-            </motion.p>
-          </motion.div>
-        </div>
-      </section>
 
       {/* =========================================================
           SEARCH + CATEGORIES
       ========================================================== */}
       <section className="border-y border-white/8 bg-[#0E0705] px-6 py-8">
+    
         <div className="mx-auto max-w-5xl">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
             {/* Search */}
+
             <div className="relative w-full lg:max-w-sm">
               <svg
                 className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-white/30"

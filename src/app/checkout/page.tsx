@@ -241,7 +241,7 @@ export default function CheckoutPage() {
                     w-full
                     rounded-xl
                     border
-                    bg-white/[0.025]
+                    bg-white/2.5
                     px-4
                     text-sm
                     text-white
@@ -283,7 +283,7 @@ export default function CheckoutPage() {
                     w-full
                     rounded-xl
                     border
-                    bg-white/[0.025]
+                    bg-white/2.5
                     px-4
                     text-sm
                     text-white
@@ -325,7 +325,7 @@ export default function CheckoutPage() {
                     w-full
                     rounded-xl
                     border
-                    bg-white/[0.025]
+                    bg-white/2.5
                     px-4
                     text-sm
                     text-white
@@ -367,7 +367,7 @@ export default function CheckoutPage() {
                     resize-none
                     rounded-xl
                     border
-                    bg-white/[0.025]
+                    bg-white/2.5
                     px-4
                     py-4
                     text-sm
@@ -416,7 +416,7 @@ export default function CheckoutPage() {
                     rounded-xl
                     border
                     border-white/10
-                    bg-white/[0.025]
+                    bg-white/2.5
                     px-4
                     py-4
                     text-sm
