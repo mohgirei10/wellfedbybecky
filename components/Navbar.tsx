@@ -145,25 +145,24 @@ export default function Navbar({
           ${
             scrolled
               ? "border-b border-white/8 bg-[#120A07]/88 shadow-[0_8px_30px_rgba(0,0,0,0.24)] backdrop-blur-2xl"
-              : "bg-[#4A2C20]"
+              : "bg-[#63331f]"
           }
         `}
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
           {/* Logo */}
-          <Link
-            href="/"
-            onClick={closeMenu}
-            className="group relative z-10 flex flex-col"
-          >
-            <span className="font-serif text-2xl font-bold italic tracking-wide text-[#CD9C61] transition-colors duration-300 group-hover:text-[#CD9C61]">
-              WELLFED
-            </span>
+       <Link
+  href="/"
+  className="group relative z-10 flex flex-col"
+>
+  <span className="font-serif text-2xl font-bold italic tracking-wide text-[#CD9C61] transition-colors duration-300 group-hover:text-[#CD9C61]">
+    WELLFED
+  </span>
 
-            <span className="-mt-1 font-serif text-xl italic tracking-wide text-[#FFFFFF]">
-              -by Becky-
-            </span>
-          </Link>
+  <span className="-mt-1 font-serif text-xl italic tracking-wide text-[#FFFFFF]">
+    -by Becky-
+  </span>
+</Link>
 
           {/* Desktop Navigation */}
           <div className="hidden items-center gap-10 md:flex">

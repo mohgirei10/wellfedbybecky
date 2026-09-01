@@ -48,7 +48,7 @@ const testimonials = [
   {
     quote:
       "Since I started taking Wellfed Tombrown with milk every morning, the results have been so visible. Pure quality.",
-    name: "A. Ibrahim",
+    name: "A. Nadia",
     location: "Lagos",
   },
   {
@@ -60,7 +60,7 @@ const testimonials = [
   {
     quote:
       "The roasted flavour is top tier. You can instantly tell that the ingredients have been thoughtfully selected.",
-    name: "David M.",
+    name: "Aysher M.",
     location: "Kaduna",
   },
 ];
@@ -157,7 +157,7 @@ export default function PremiumWellfedLanding() {
                 text-5xl
                 leading-[0.98]
                 tracking-[-0.04em]
-                text-[#F9F4EE]
+                text-[#120A07]/40
                 sm:text-6xl
                 lg:text-7xl
                 xl:text-8xl
@@ -326,142 +326,99 @@ export default function PremiumWellfedLanding() {
           {/* =====================================================
               HERO PRODUCT
           ====================================================== */}
+<div
+  className="
+    relative
+    min-h-125
+    overflow-hidden
+    rounded-4xl
+    border
+    border-[#0A0503]
+    bg-[#6B4F3A]
+    sm:min-h-145
+    lg:min-h-162.5
+  "
+>
+  {/* Product image covering the entire area */}
+  <motion.img
+    src="/logo.png"
+    alt="Wellfed Tombrown"
+    className="
+      absolute
+      inset-0
+      z-10
+      h-full
+      w-full
+      object-cover
+      object-center
+    "
+    animate={{
+      scale: [1, 1.02, 1],
+    }}
+    transition={{
+      duration: 6,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+  />
 
-          <motion.div
-            initial={{
-              opacity: 0,
-              scale: 0.96,
-              y: 20,
-            }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              y: 0,
-            }}
-            transition={{
-              duration: 1,
-              delay: 0.25,
-              ease: [0.16, 1, 0.3, 1],
-            }}
-            className="relative mx-auto w-full max-w-2xl"
-          >
-            <div className="
-              relative
-              min-h-125
-              overflow-hidden
-              rounded-4xl
-              border
-              border-[#0A0503]
-              bg-[#6B4F3A]
-              sm:min-h-150
-              lg:min-h-162.5
-            ">
+  {/* Dark/light overlay for readability */}
+  <div
+    className="
+      absolute
+      inset-0
+      z-20
+      bg-linear-to-t
+      from-[#120A07]/50
+      via-transparent
+      to-transparent
+    "
+  />
 
-              {/* Circle */}
-              <div className="
-                absolute
-                left-1/2
-                top-1/2
-                h-[75%]
-                w-[75%]
-                -translate-x-1/2
-                -translate-y-1/2
-                rounded-full
-                border
-                border-[#CD9C61]/15
-                bg-[#CD9C61]/5
-              " />
+  {/* Floating stat */}
+  <motion.div
+    initial={{ opacity: 0, x: 20 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{
+      duration: 0.8,
+      delay: 1,
+    }}
+    className="
+      absolute
+      bottom-6
+      right-6
+      z-30
+      rounded-2xl
+      border
+      border-white/30
+      bg-[#120A07]/90
+      px-5
+      py-4
+      shadow-2xl
+      backdrop-blur-xl
+    "
+  >
+    <p className="font-serif text-4xl text-white">
+      100
+      <span className="text-xl text-[#CD9C61]">%</span>
+    </p>
 
-              <div className="
-                absolute
-                left-1/2
-                top-1/2
-                h-[40%]
-                w-[50%]
-                -translate-x-1/2
-                -translate-y-1/2
-                rounded-full
-                bg-[#CD9C61]/15
-                blur-[70px]
-              " />
-
-              {/* Product */}
-              <motion.img
-                src="/logo.png"
-                alt="Wellfed Tombrown pouch"
-                className="
-                  absolute
-                  bottom-7
-                  left-1/2
-                  z-10
-                  h-[90%]
-                  w-auto
-                  max-w-none
-                  -translate-x-1/2
-                  object-contain
-                  drop-shadow-[0_35px_40px_rgba(23,12,7,0.28)]
-                "
-                animate={{
-                  y: [0, -7, 0],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-
-              {/* Floating stat */}
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  x: 20,
-                }}
-                animate={{
-                  opacity: 1,
-                  x: 0,
-                }}
-                transition={{
-                  duration: 0.8,
-                  delay: 1,
-                }}
-                className="
-                  absolute
-                  bottom-7
-                  right-6
-                  z-20
-                  rounded-2xl
-                  border
-                  border-white/30
-                  bg-[#120A07]/90
-                  px-5
-                  py-4
-                  shadow-2xl
-                  backdrop-blur-xl
-                "
-              >
-                <p className="font-serif text-4xl text-white">
-                  100
-                  <span className="text-xl text-[#CD9C61]">
-                    %
-                  </span>
-                </p>
-
-                <p className="
-                  mt-1
-                  text-[9px]
-                  font-semibold
-                  uppercase
-                  tracking-[0.16em]
-                  text-white/45
-                ">
-                  Natural roasted
-                  <br />
-                  grains & nuts
-                </p>
-              </motion.div>
-            </div>
-          </motion.div>
+    <p
+      className="
+        mt-1
+        text-[9px]
+        font-semibold
+        uppercase
+        tracking-[0.16em]
+        text-white/50
+      "
+    >
+      Natural roasted
+      <br />
+      grains & nuts
+    </p>
+  </motion.div>
+</div>
         </div>
       </section>
 

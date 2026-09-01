@@ -164,23 +164,23 @@ export default function RootLayout({
           </span>
         </a>
 
-        <footer className="border-t border-white/8 bg-[#4A2c20] px-6 pb-10 pt-20">
+        <footer className="border-t border-white/8 bg-[#63331f] px-6 pb-10 pt-20">
           <div className="mx-auto max-w-7xl">
             <div className="grid grid-cols-1 gap-14 md:grid-cols-12">
               {/* Brand */}
               <div className="md:col-span-5">
-                  <Link
-            href="/"
-            className="group relative z-10 flex flex-col"
-          >
-            <span className="font-serif text-2xl font-bold italic tracking-wide text-[#CD9C61] transition-colors duration-300 group-hover:text-[#CD9C61]">
-              WELLFED
-            </span>
+         <Link
+  href="/"
+  className="group inline-flex flex-col"
+>
+  <span className="font-serif text-2xl font-bold italic tracking-wide text-[#CD9C61] transition-colors duration-300 group-hover:text-[#CD9C61]">
+    WELLFED
+  </span>
 
-            <span className="-mt-1 font-serif text-xl italic tracking-wide text-[#FFFFFF]">
-              -by Becky-
-            </span>
-          </Link>
+  <span className="-mt-1 font-serif text-xl italic tracking-wide text-[#FFFFFF]">
+    -by Becky-
+  </span>
+</Link>
                 <p className="mt-7 max-w-md text-sm font-light leading-7 text-white/50">
                   Premium Tombrown blends made with carefully selected
                   ingredients, crafted for nourishment, everyday wellness and
@@ -252,7 +252,7 @@ export default function RootLayout({
     className="flex items-center gap-3 transition hover:text-white"
   >
     <Phone className="h-5 w-5 shrink-0" />
-    <span>+234 701 709 6710</span>
+    <span> 0701 709 6710</span>
   </a>
 
   {/* Email */}
@@ -262,6 +262,14 @@ export default function RootLayout({
   >
     <Mail className="h-5 w-5 shrink-0" />
     <span>{email}</span>
+  </a>
+
+  <a href=""
+      className="flex items-center gap-3 transition hover:text-white"
+>
+   <TikTokIcon className="h-5 w-5" />
+   @Wellfedbybecky
+   
   </a>
 </div>
               </div>
@@ -299,6 +307,14 @@ export default function RootLayout({
                     className="block transition hover:translate-x-1 hover:text-white"
                   >
                     FAQs
+                  </Link>
+
+                  
+                  <Link
+                    href="/policy"
+                    className="block transition hover:translate-x-1 hover:text-white"
+                  >
+                    Business Policy
                   </Link>
                 </div>
               </div>
