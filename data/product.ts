@@ -111,7 +111,7 @@ export const products: Product[] = [
       {
         id: "1-5kg",
         label: "1.5 KG",
-        price: 15000,
+        price: 20000,
       },
     ],
   },
